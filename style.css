@@ -1,0 +1,129 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --ff-texting: 'Staatliches', cursive;
+  --ff-p: 'Palanquin', sans-serif;
+
+  --bg-header: hsl(218, 17%, 62%);
+  --bg-text-header: hsl(275, 18%, 79%);
+  --bg-card: hsl(312, 91%, 96%);
+  --bg-main: hsl(233, 100%, 97%);
+
+  --fc-header: hsl(0, 0%, 100%);
+  --fc: hsl(273, 88%, 6%);
+  --fc-card: hsl(232, 17%, 35%);
+
+  font-size: 62.5%;
+}
+
+body{
+  background-color: #ece7e5;
+  font-family: var(--ff-texting);
+  color: var(--fc-card);
+}
+
+.page{
+  background-color: var(--bg-main);
+  max-width: 38rem;
+  margin: 0 auto;
+}
+
+header{
+  background-color: var(--bg-header);
+  color: var(--fc-header);
+  text-align: center;
+
+  height: 28rem;
+}
+
+header .faixa{
+  background-color: var(--bg-text-header);
+  margin-bottom: 30px;
+}
+
+header img{
+  margin: 32px 123px ;
+}
+
+header h1{
+  font-weight: normal;
+  font-size: 4rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+}
+
+main p{
+  margin: 1.4rem 0 6.3rem;
+  text-align: center;
+  font-family: var(--ff-p);
+  font-size: 2rem;
+  line-height: 1.5rem;
+  width: 30.5rem;
+  height: 7.5rem;
+}
+
+main{
+  padding: 1.4rem 3.2rem 6rem;
+}
+
+.card{
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.card img{
+  object-fit: cover;
+}
+
+.card h2{
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+  background: #FEEAFA;
+  border-radius: 20px;
+  width: 11.2rem;
+  height: 3.5rem;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 34px;
+
+  padding: 0 2.6rem;
+}
+
+.card h2{
+  animation: topdown 700ms 300ms backwards;
+}
+
+.card{
+  animation-name: downtop;
+  animation-duration: 700ms;
+}
+
+@keyframes topdown{
+  0%{
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downtop{
+  0%{
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
